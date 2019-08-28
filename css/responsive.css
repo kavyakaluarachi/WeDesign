@@ -1,0 +1,247 @@
+
+/* ==================================================
+Mobile Menu:
+====================================================*/
+
+.navbar-header {
+    position:relative;
+}
+
+#mobile-nav-open-btn {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    right:0;
+    top:6px;
+    -webkit-transition: 0.3s;    transition: 0.3s;
+    
+    /*hiding*/
+    display:none;
+    
+}
+
+#mobile-nav-open-btn:hover, #mobile-nav-open-btn:focus {
+    color: #f4c613;
+}
+
+ #mobile-nav {
+        width: 100%;
+        height: 0%; /*default mobile nav hidden*/
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background-color: rgba(0, 0, 0, 0.8);
+        -webkit-transition: all 300ms linear;
+        transition: all 300ms linear;
+        overflow-y: hidden;
+    }
+
+    #mobile-nav-close-btn {
+        font-family: "Raleway", sans-serif;
+        font-size: 65px;
+        color: #fff;
+        cursor: pointer;
+        position: absolute;
+        font-weight: 200;
+        top: -9px;
+        right: 13px;
+        -webkit-transition: all 300ms linear;
+        transition: all 300ms linear;
+        overflow-y: hidden;
+    }
+    
+    #mobile-nav-content {
+        text-align: center;
+        width: 100%;
+        margin-top: 30px;
+        position: relative;
+        top:10%;
+    }
+    
+    #mobile-nav ul li {
+        margin-bottom: 20px;
+    }
+    
+    #mobile-nav a {
+        font-family: "Raleway", sans-serif;
+        font-size: 18px;
+        color: #fff;
+        text-transform: uppercase;
+        display: inline;
+        -webkit-transition: 0.3s;transition: 0.3s;
+    }
+    
+    
+    #mobile-nav a:hover, 
+    #mobile-nav a:focus,
+    #mobile-nav-close-btn:hover,
+    #mobile-nav-close-btn:focus{
+        color: #f4c613;
+        background: none;
+    }
+
+
+
+
+/* ==================================================
+Bootstrap Media Queries:
+====================================================*/
+
+/*large devices ~ Desktops/Laptops*/
+@media(min-width: 1200px) and (max-width: 1299px) {
+
+    /* fix the navigation bar*/
+    .site-nav-wrapper {
+        padding: 0 20px;
+    }
+
+    #contact-heading h2,
+    #services-heading h2,
+    #stats-heading h2,
+    #team-header,
+    #portfolio-header h2,
+    #about-left h1 {
+        font-size: 42px;
+    }
+ 
+
+}
+
+/*medium devices ~ landscape tablets & med. desktops*/
+@media(min-width: 992px) and (max-width: 1199px) {
+    .site-nav-wrapper {
+        padding:0;
+    }
+    
+ 
+
+    #contact-heading h2,
+    #services-heading h2,
+    #stats-heading h2,
+    #team-header,
+    #portfolio-header h2,
+    #about-left h1 {
+        font-size: 42px;
+    }
+
+    
+/*
+    #homepage h2, #about h2, #services h2, #work-portfolio h2, #team h2, #contact h2 {
+        
+        font-size: 29px;
+        
+    }
+*/
+}
+
+/*small devices (portrait tablets & small desktops)*/
+@media(min-width: 768px) and (max-width:991px) {
+    
+  
+    .site-nav-wrapper {
+        padding: 0;
+    }
+    
+    #home-heading h1 {
+        font-size: 41px;
+    }
+    
+    #home-pagagraph p {
+        font-size: 13px;
+    }
+    
+    .btn-general {
+        padding: 8px 35px 8px 35px;
+        font-size: 10px;
+    }
+    
+    .small-text {display: inline-block;}
+    .full-text {display: none;}
+    
+}
+
+/*extra small devices (landscape phones & portrait tablets)*/
+@media(max-width:767px) {
+    
+    .site-nav-wrapper, .white-nav-top {
+        padding:0;
+    }
+    
+    .navbar {
+        padding:20px 0;
+    }
+    
+    /*display mobile menu*/
+    #mobile-nav-open-btn {
+        display: block;
+    }
+
+   
+    #home-heading h1 {
+        font-size: 22px;
+    }
+
+    #home-pagagraph p {
+        font-size: 13px;
+        line-height: 18px;
+        margin: 8px 2px 30px 2px;
+    }
+
+    .btn-general {
+        padding: 8px 25px 6px 25px;
+        font-size: 10px;
+    }
+
+    .content-box-lg {
+        padding: 70px 0;
+    }
+
+    .content-box-md {
+        padding: 70px 0;
+    }
+
+    .about-item {
+        padding: 55px 30px;
+        margin-bottom: 20px;
+    }
+
+
+
+    #about-part-2 p {
+        font-size: 13px;
+    }
+
+    #about-part-2 h3 {
+        font-size: 18px;
+    }
+
+    #contact-heading h2,
+    #services-heading h2,
+    #stats-heading h2,
+    #team-header,
+    #portfolio-header h2,
+    #about-left h1 {
+        font-size: 30px;
+    }
+
+    #consultation,
+    #service-box h4,
+        {
+        font-size: 15px;
+    }
+
+
+    #service-box p,
+    #team-member p {
+        font-size: 13px;
+    }
+
+    .team-h3 {
+        font-size: 16px;
+    }
+    
+
+}
